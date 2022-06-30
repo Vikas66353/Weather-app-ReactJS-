@@ -4,7 +4,7 @@ const WeatherCard = ({ currentWeatherData }) => {
 
           <div className="current-details">
             <div className="current-temp">
-              <h1>Lucknow</h1>
+              <h1>Bengaluru</h1>
               <h2>
                 {currentWeatherData.main.temp}
                 <sup>o</sup>

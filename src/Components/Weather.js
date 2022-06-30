@@ -8,7 +8,7 @@ const AppProvider = React.createContext();
 const currentURL =
   "https://api.openweathermap.org/data/2.5/weather?q=bengaluru&appid=47c54d65d5acfce756053187f746677b";
 const forecastURL =
-  "http://api.weatherapi.com/v1/forecast.json?key=19f3fcf03e554ecea42105200222906&q=bengaluru&days=6&aqi=no&alerts=no";
+  "https://api.weatherapi.com/v1/forecast.json?key=19f3fcf03e554ecea42105200222906&q=bengaluru&days=6&aqi=no&alerts=no";
 
 
 const Weather = () => {
