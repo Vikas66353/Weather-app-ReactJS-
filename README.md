@@ -1,4 +1,4 @@
-new weather app deploy link:-https://delightful-medovik-c0fcbb.netlify.app/
+weather app deploy link:-https://delightful-medovik-c0fcbb.netlify.app/
 
 weather-app screenshots:-
 
