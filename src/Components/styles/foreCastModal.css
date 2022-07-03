@@ -1,0 +1,75 @@
+:root {
+  --text-color: rgb(95, 131, 244);
+  --bagroung-color: rgb(254, 255, 254);
+  --shadow-color: rgb(238, 238, 238);
+}
+.forecastModal {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .forecastModal nav {
+    background-color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .forecastModal nav h2 {
+    color: var(--bagroung-color);
+  }
+  
+  .forecastModalContainer {
+    position: absolute;
+    background-color: var(--bagroung-color);
+    border: 2px solid var(--text-color);
+    box-shadow: 10px 0px 10px 0px var(--shadow-color);
+    height: 300px;
+    width: 400px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .close {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  
+  .forecastModalContent {
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .forecastModalContent div {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .close-icon {
+    margin: 0;
+    width: 25px;
+    height: 25px;
+    color: var(--bagroung-color);
+  }
+  
+  .forecastModalContainer div {
+    color: var(--text-color);
+  }
+
+  @media screen and (max-width: 720px) {
+    .forecastModalContainer {
+      top: 90%;
+      transform: translate(-50%, 100%);
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .forecastModalContainer {
+      top: 90%;
+      transform: translate(-54%, 100%);
+    }
+    .forecastModalContainer {
+      height: 250px;
+      width: 270px;
+    }
+  }

@@ -35,7 +35,7 @@ const ForecastModal=({closeModal,id})=>{
               </div>
               <div>
                 <span>Weather</span>
-                <span>{forecastData[id].day.condition.text}<sup>o</sup></span>
+                <span>{forecastData[id].day.condition.text}</span>
                 
               </div>
               <div>

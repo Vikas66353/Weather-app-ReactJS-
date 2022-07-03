@@ -1,52 +1,55 @@
-const WeatherCard = ({ currentWeatherData }) => {
+const WeatherCard = ({currentWeatherData,forecastWeatherData,city }) => {
   return (
     <>
 
           <div className="current-details">
             <div className="current-temp">
-              <h1>Bengaluru</h1>
+              <h1>{city}</h1>
               <h2>
-                {currentWeatherData.main.temp}
+                {currentWeatherData.temp_c}
                 <sup>o</sup>
               </h2>
-              <h2>{currentWeatherData.weather[0].main}</h2>
+              <h2>
+              <img src={currentWeatherData.condition.icon} alt=""/>
+                {currentWeatherData.condition.text}
+              </h2>
             </div>
             <div className="current-weather-details">
               <div>
                 <span>Humidity</span>
-                <span>{currentWeatherData.main.humidity}</span>
+                <span>{currentWeatherData.humidity}</span>
               </div>
               <div>
                 <span>Wind</span>
                 <span>
-                  {currentWeatherData.wind.speed},{currentWeatherData.wind.deg}
-                  <span>&#176;</span>{" "}
+                  {currentWeatherData.wind_degree}
+                  <span>&#176;</span>
                 </span>
               </div>
               <div>
                 <span>Visibility</span>
-                <span>{currentWeatherData.visibility}</span>
+                <span>{currentWeatherData.vis_km}</span>
               </div>
               <div>
                 <span>Max Temp.</span>
-                <span>{currentWeatherData.main.temp_max}<sup>o</sup></span>
+                <span>{forecastWeatherData[0].day.maxtemp_c}<sup>o</sup></span>
               </div>
               <div>
                 <span>Min Temp.</span>
-                <span>{currentWeatherData.main.temp_min}<sup>o</sup></span>
+                <span>{forecastWeatherData[0].day.mintemp_c}<sup>o</sup></span>
                 
               </div>
               <div>
                 <span>Pressure</span>
-                <span>{currentWeatherData.main.pressure}</span>
+                <span>{currentWeatherData.pressure_mb}</span>
               </div>
               <div>
                 <span>Sunrise Time</span>
-                <span>{currentWeatherData.sys.sunrise}</span>
+                <span>{forecastWeatherData[0].astro.sunrise}</span>
               </div>
               <div>
                 <span>Sunset Time</span>
-                <span>{currentWeatherData.sys.sunset}</span>
+                <span>{forecastWeatherData[0].astro.sunset}</span>
               </div>
             </div>
           </div>

@@ -15,10 +15,10 @@ const Forecast = ({ forecastWeatherData }) => {
   };
   return (
     <>
-      <div className="forecast">
+      <div className="forecast-container">
         {forecastWeatherData.map((weather, index) => {
           return (
-            <div className="forecast-card" key={index}>
+            <div className="forecast-card" key={index} onClick={() => openModal(index)}>
               <nav>
                 <h2>{weather.date}</h2>
               </nav>
@@ -32,17 +32,16 @@ const Forecast = ({ forecastWeatherData }) => {
                     {weather.day.mintemp_c}
                     <sup>o</sup>
                   </h2>
-                  <h2>
-                    <img
-                      src={weather.day.condition.icon}
-                      alt=""
-                    />
-                    {weather.day.condition.text}
-                  </h2>
+                
+                    <h2>
+                      <img src={weather.day.condition.icon} alt="" />
+                      {weather.day.condition.text}
+                    </h2>
+              
                 </div>
-                <button onClick={() => openModal(index)} className="btn">
+                {/* <button onClick={() => openModal(index)} className="btn">
                   more...
-                </button>
+                </button> */}
               </div>
             </div>
           );
